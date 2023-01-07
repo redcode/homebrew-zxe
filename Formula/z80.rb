@@ -20,7 +20,7 @@ class Z80 < Formula
       "-DZ80_WITH_HTML_DOCUMENTATION=NO",
       "-DZ80_WITH_PDF_DOCUMENTATION=NO",
       "-DZ80_WITH_PKGCONFIG_SUPPORT=YES",
-      "-DZ80_WITH_STANDARD_DOCUMENTS=YES",
+      "-DZ80_WITH_STANDARD_DOCUMENTS=NO",
       "-DZ80_WITH_TESTS=NO",
       "-DZ80_WITH_EXECUTE=YES",
       "-DZ80_WITH_FULL_IM0=YES",
@@ -31,7 +31,7 @@ class Z80 < Formula
       "-DZ80_WITH_ZILOG_NMOS_LD_A_IR_BUG=YES",
       *std_cmake_args
     system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", "--install", "build", "--strip"
   end
 
   test do
