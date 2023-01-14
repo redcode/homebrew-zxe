@@ -2,7 +2,7 @@ class Zeta < Formula
   desc "Header-only general purpose library"
   homepage "https://github.com/redcode/Zeta"
   url "https://zeta.st/download/Zeta-0.1-pre-2023-01-13.tar.xz"
-  version "0.1-pre.2023.01.13"
+  version "0.1-pre-2023-01-13"
   sha256 "17ff482ec26a9ff0b9b853a1bf867ac0fa9e441d3dfd853c7114ca676a42d1c8"
   license "LGPL-3.0-or-later"
 
