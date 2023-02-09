@@ -1,9 +1,9 @@
 class Z80 < Formula
   desc "Zilog Z80 CPU emulator"
   homepage "https://github.com/redcode/Z80"
-  url "https://zxe.io/software/Z80/download/Z80-0.2-pre-2023-01-15.tar.xz"
-  version "0.2-pre-2023-01-15"
-  sha256 "30d4f0afb0c67b9383361e0ce4de34983e7bb0471b28dcf03c8d75f5b9cd2da8"
+  url "https://zxe.io/software/Z80/download/Z80-0.2-pre-2023-02-09.tar.xz"
+  version "0.2-pre-2023-02-09"
+  sha256 "e4abfd9fb5cd263e7d6adc2a12f2f2ac956f99413db5f64de0f4f95e35097a5d"
   license "LGPL-3.0-or-later"
 
   depends_on "cmake" => :build
@@ -14,7 +14,7 @@ class Z80 < Formula
       "-S", ".", "-B", "build",
       "-DBUILD_SHARED_LIBS=YES",
       "-DCMAKE_VERBOSE_MAKEFILE=YES",
-      "-DZ80_DOWNLOAD_TEST_FILES=NO",
+      "-DZ80_FETCH_TEST_FILES=NO",
       "-DZ80_NOSTDLIB_FLAGS=Auto",
       "-DZ80_WITH_CMAKE_SUPPORT=YES",
       "-DZ80_WITH_HTML_DOCUMENTATION=NO",
