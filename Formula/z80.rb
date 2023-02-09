@@ -3,7 +3,7 @@ class Z80 < Formula
   homepage "https://github.com/redcode/Z80"
   url "https://zxe.io/software/Z80/download/Z80-0.2-pre-2023-02-09.tar.xz"
   version "0.2-pre-2023-02-09"
-  sha256 "028e5461da2f455e21327b07af53222464db68b63caffaffb886b2a6e01896d5"
+  sha256 "535845d071e207c156844765ebb9b1a36bd506453d9e883306648c5dd9d2adee"
   license "LGPL-3.0-or-later"
 
   depends_on "cmake" => :build
