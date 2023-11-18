@@ -1,4 +1,4 @@
-class ZXSpectrumFirmware < Formula
+class ZxspectrumFirmware < Formula
   desc "ZX Spectrum ROM images"
   homepage "https://github.com/redcode/ZXSpectrum/wiki"
   url "https://zxe.io/depot/ZX%20Spectrum%20-%20Firmware%20%282023-11-18%29.7z"
