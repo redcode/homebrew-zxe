@@ -1,11 +1,7 @@
-# Redcode Zxe
+# `redcode/zxe` <sub><img src="https://zxe.io/software/Z80/assets/images/homebrew-icon.svg" height="48"></sub> Homebrew Tap
 
-## How do I install these formulae?
+[![](https://github.com/redcode/homebrew-zxe/actions/workflows/tests.yml/badge.svg)](https://github.com/redcode/homebrew-zxe/actions/workflows/tests.yml)
 
-`brew install redcode/zxe/<formula>`
+This is a custom [Homebrew](https://brew.sh) [tap](https://docs.brew.sh/Taps) for [Manuel](https://github.com/redcode) and [Sofía](https://github.com/agaxia)'s software and other things that our packages depend on. We also maintain a Gentoo [overlay](https://github.com/redcode/zxe-gentoo-overlay) and our own APT [repository](https://zxe.io/repos).
 
-Or `brew tap redcode/zxe` and then `brew install <formula>`.
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+To install formulae from this tap, use `brew install redcode/zxe/<formula>`. If in doubt, read the [Homebrew documentation](https://docs.brew.sh). For a list of the packages we distribute and other installation methods, visit our [repository](https://zxe.io/repos) page.
