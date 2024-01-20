@@ -1,9 +1,9 @@
 class Zeta < Formula
   desc "Header-only general purpose library"
   homepage "https://github.com/redcode/Zeta"
-  url "https://zeta.st/download/Zeta-0.1-pre-2024-01-07.tar.xz"
-  version "0.1-pre-2024-01-07"
-  sha256 "f110c7c71ab80d645abf4de63c7ee0ca9bb5a3b9162cccf76e5ce3fd27e1b083"
+  url "https://zeta.st/download/Zeta-0.1-pre-2024-01-20.tar.xz"
+  version "0.1-pre-2024-01-20"
+  sha256 "987e0a3cdac7e04ac6de2fc671b42495ae92f066cd95b9aa7e2a36efec133f11"
   license "LGPL-3.0-or-later"
 
   depends_on "cmake" => :build
