@@ -11,7 +11,7 @@ class Zeta < Formula
   def install
     system "cmake",
       "-S", ".", "-B", "build",
-      "-DZeta_WITH_CMAKE_SUPPORT=YES",tar
+      "-DZeta_WITH_CMAKE_SUPPORT=YES",
       "-DZeta_WITH_PKGCONFIG_SUPPORT=YES",
       *std_cmake_args
     system "cmake", "--install", "build"
