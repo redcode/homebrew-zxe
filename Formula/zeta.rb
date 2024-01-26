@@ -1,9 +1,9 @@
 class Zeta < Formula
   desc "Header-only general purpose library"
   homepage "https://github.com/redcode/Zeta"
-  url "https://zeta.st/download/Zeta-0.1-pre-2024-01-20.tar.xz"
+  url "https://zeta.st/download/Zeta-0.1-pre-2024-01-26.tar.xz"
   version "0.1-pre-2024-01-20"
-  sha256 "987e0a3cdac7e04ac6de2fc671b42495ae92f066cd95b9aa7e2a36efec133f11"
+  sha256 "66bb093a7aef47af72ae6055e1e5c239d52ad30bdb8ad35349b40160ff451278"
   license "LGPL-3.0-or-later"
 
   depends_on "cmake" => :build
@@ -11,7 +11,7 @@ class Zeta < Formula
   def install
     system "cmake",
       "-S", ".", "-B", "build",
-      "-DZeta_WITH_CMAKE_SUPPORT=YES",
+      "-DZeta_WITH_CMAKE_SUPPORT=YES",tar
       "-DZeta_WITH_PKGCONFIG_SUPPORT=YES",
       *std_cmake_args
     system "cmake", "--install", "build"
