@@ -1,9 +1,9 @@
 class Z80 < Formula
   desc "Zilog Z80 CPU emulator"
   homepage "https://github.com/redcode/Z80"
-  url "https://zxe.io/software/Z80/download/Z80-0.2-pre-2024-03-16.tar.xz"
-  version "0.2-pre-2024-03-16"
-  sha256 "f0440f5571cc3c9c53a5b2520fe0a61eaf767555015d3fec3180690575a68176"
+  url "https://zxe.io/software/Z80/download/Z80-0.2-pre-2024-04-18.tar.xz"
+  version "0.2-pre-2024-04-18"
+  sha256 "6d97b6765cdeabbcac33b79171e87e1f092f0c80657662af1c602e93116840c3"
   license "LGPL-3.0-or-later"
 
   depends_on "cmake" => :build
@@ -38,7 +38,6 @@ class Z80 < Formula
     (testpath/"test.c").write <<~EOS
       #include <Z80.h>
       #include <Z/constants/pointer.h>
-      #include <Z/macros/language.h>
       #include <stdio.h>
       #include <string.h>
 
