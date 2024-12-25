@@ -1,9 +1,9 @@
 class Z80insnclock < Formula
   desc "Z80 instruction clock"
   homepage "https://github.com/agaxia/Z80InsnClock"
-  url "https://zxe.io/software/Z80InsnClock/download/Z80InsnClock-0.1-pre-2024-12-24.tar.xz"
-  version "0.1-pre-2024-12-24"
-  sha256 "525294d28b6d1631f586ac9efc32faa047ddd33298bceb952b2a1e86a128614c"
+  url "https://zxe.io/software/Z80InsnClock/download/Z80InsnClock-0.1-pre-2024-12-25.tar.xz"
+  version "0.1-pre-2024-12-25"
+  sha256 "4f403552a73908793f6c7112b1f57ce3cba3b70bd6b569807f21b8ae6512ac49"
   license "0BSD"
 
   depends_on "cmake" => :build
