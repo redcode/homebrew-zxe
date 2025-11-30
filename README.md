@@ -1,4 +1,4 @@
-# `redcode/zxe` <sub><img src="https://zxe.io/software/Z80/assets/images/homebrew-icon.svg" height="48"></sub> Homebrew Tap
+# `redcode/zxe` <sub><img src="https://zxe.io/software/Z80/assets/images/homebrew-icon.svg" height="48" width="32"></sub> Homebrew Tap
 
 [![](https://github.com/redcode/homebrew-zxe/actions/workflows/tests.yml/badge.svg)](https://github.com/redcode/homebrew-zxe/actions/workflows/tests.yml)
 
