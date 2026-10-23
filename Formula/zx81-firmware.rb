@@ -2,6 +2,7 @@ class Zx81Firmware < Formula
   desc "Collection of ZX81 firmware"
   homepage "https://zxe.io/depot"
   url "https://zxe.io/depot/download/ZX81%20-%20Firmware%20%282023-11-19%29.7z"
+  version "20231119"
   sha256 "8dda82c9b135c902e7fbb531200ee8ec8aaa8b6d2ff673728f345cf55618c748"
   license :cannot_represent
 
