@@ -6,13 +6,13 @@ class LibarchiveAppleHeaders < Formula
   sha256 "f7dbab8eca7685d75eb22e244e989bf337155701f577dbe3091a2eb7314b7973"
   license "BSD-2-Clause"
 
+  livecheck do
+    skip "Version is pinned to the macOS system libarchive and must be bumped manually"
+  end
+
   def install
     include.install "libarchive/libarchive/archive.h"
     include.install "libarchive/libarchive/archive_entry.h"
-  end
-
-  livecheck do
-    skip "Version is pinned to the macOS system libarchive and must be bumped manually"
   end
 
   test do
