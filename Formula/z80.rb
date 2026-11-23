@@ -10,27 +10,26 @@ class Z80 < Formula
   depends_on "zeta"
 
   def install
-    system "cmake",
-      "-S", ".", "-B", "build",
-      "-DBUILD_SHARED_LIBS=YES",
-      "-DCMAKE_VERBOSE_MAKEFILE=YES",
-      "-DZ80_FETCH_TEST_FILES=NO",
-      "-DZ80_NOSTDLIB_FLAGS=Auto",
-      "-DZ80_WITH_CMAKE_SUPPORT=YES",
-      "-DZ80_WITH_HTML_DOCUMENTATION=NO",
-      "-DZ80_WITH_PDF_DOCUMENTATION=NO",
-      "-DZ80_WITH_PKGCONFIG_SUPPORT=YES",
-      "-DZ80_WITH_STANDARD_DOCUMENTS=NO",
-      "-DZ80_WITH_STEP_TESTING_TOOL=NO",
-      "-DZ80_WITH_TESTING_TOOL=NO",
-      "-DZ80_WITH_EXECUTE=YES",
-      "-DZ80_WITH_FULL_IM0=YES",
-      "-DZ80_WITH_IM0_RETX_NOTIFICATIONS=YES",
-      "-DZ80_WITH_Q=YES",
-      "-DZ80_WITH_SPECIAL_RESET=NO",
-      "-DZ80_WITH_UNOFFICIAL_RETI=NO",
-      "-DZ80_WITH_ZILOG_NMOS_LD_A_IR_BUG=YES",
-      *std_cmake_args
+    args = %w[
+      -DBUILD_SHARED_LIBS=YES
+      -DCMAKE_VERBOSE_MAKEFILE=YES
+      -DZ80_FETCH_TEST_FILES=NO
+      -DZ80_NOSTDLIB_FLAGS=Auto
+      -DZ80_WITH_CMAKE_SUPPORT=YES
+      -DZ80_WITH_HTML_DOCUMENTATION=NO
+      -DZ80_WITH_PDF_DOCUMENTATION=NO
+      -DZ80_WITH_PKGCONFIG_SUPPORT=YES
+      -DZ80_WITH_STANDARD_DOCUMENTS=NO
+      -DZ80_WITH_EXECUTE=YES
+      -DZ80_WITH_FULL_IM0=YES
+      -DZ80_WITH_IM0_RETX_NOTIFICATIONS=YES
+      -DZ80_WITH_Q=YES
+      -DZ80_WITH_SPECIAL_RESET=NO
+      -DZ80_WITH_UNOFFICIAL_RETI=NO
+      -DZ80_WITH_ZILOG_NMOS_LD_A_IR_BUG=YES
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build", "--strip"
   end
@@ -98,7 +97,7 @@ class Z80 < Formula
     EOS
 
     (testpath/"CMakeLists.txt").write <<~EOS
-      cmake_minimum_required(VERSION 3.3)
+      cmake_minimum_required(VERSION 3.3...${CMAKE_VERSION})
       project(test LANGUAGES C)
       find_package(Z80 REQUIRED)
       add_executable(test "${CMAKE_CURRENT_SOURCE_DIR}/test.c")
@@ -107,6 +106,6 @@ class Z80 < Formula
 
     system "cmake", "-S", testpath, "-B", (testpath/"build"), *std_cmake_args
     system "cmake", "--build", (testpath/"build")
-    assert_equal "passed", shell_output(testpath/"build"/"test-client").strip
+    assert_equal "passed", shell_output(testpath/"build"/"test").strip
   end
 end
