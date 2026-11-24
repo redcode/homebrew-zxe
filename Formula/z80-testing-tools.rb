@@ -34,6 +34,10 @@ class Z80TestingTools < Formula
       -DZ80_WITH_UNOFFICIAL_RETI=NO
       -DZ80_WITH_ZILOG_NMOS_LD_A_IR_BUG=YES
     ]
+    # `libZ80` is built here but installed by the `z80` formula. Its install
+    # name is forced so that the tools are linked against it by absolute path
+    # instead of an unresolved `@rpath` reference.
+    args << "-DCMAKE_INSTALL_NAME_DIR=#{formula_opt_lib("z80")}"
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
